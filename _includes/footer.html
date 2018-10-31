@@ -1,15 +1,6 @@
-<footer>
-	<div class="wrapper">
-		<p class="edit-footer"><a class="editor-link btn" href="cloudcannon:collections/_data/footer.yml" class="btn" style="padding: 5px;"><strong>&#9998;</strong> Edit footer</a></p>
-		<ul class="footer-links">
-			{% for link in site.data.footer %}
-				<li><a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon }}-icon"{% endif %}>
-					{% if link.social_icon %}
-						{% include social-icon.html icon=link.social_icon %}
-					{% endif %}
-					{{ link.name }}</a></li>
-			{% endfor %}
-		</ul>
-		<p class="copyright">&copy; {{ site.title }} {{ site.time | date: "%Y" }}. All rights reserved.</p>
-	</div>
-</footer>
+<footer class="footer">
+    <div class="text-center">
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">{{ site.data.data.footer }}</small>
+    </div><!--//container-->
+</footer><!--//footer-->

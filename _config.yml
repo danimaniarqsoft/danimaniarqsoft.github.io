@@ -1,92 +1,28 @@
-# ----
-# Site
+#Update all the sections by editing the data.yml file inside _data folder.
 
-title: kukulkan
-url: "https://github.com/kukulkan-project"
-baseurl:
-google_analytics_key:
-disqus_shortname:
-newsletter_action:
+# Site Settings
+title: My Resume
+url: 'http://webjeda.com'
+baseurl: '/online-cv' #change it according to your repository name
+# Style will be applied only after restarting the build or serve. Just choose one of the options.
+theme_skin: blue # blue turquoise green berry orange ceramic
 
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Knowledge base template for kukulkan.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: Base Template
-  links:
-    - https://github.com/CloudCannon/base-jekyll-template
+# Tracker
+analytics: UA-83979019-1
 
-# -----
-# Build
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-timezone: Etc/UTC
+# Build settings
+encoding: "utf-8"
+compress_html: # - http://jch.penibelst.de/
+  clippings: all
+  ignore:
+    envs: development
 
-permalink: /:categories/:title/
-
-plugins:
-  - jekyll-extract-element
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-archives
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
-
-collections:
-  sets:
-
-
-jekyll-archives:
-  enabled: ['categories']
-
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true
-  -
-    scope:
-      type: "sets"
-    values:
-      _hide_content: true
-  -
-    scope:
-      path: "index.html"
-    values:
-      body_class: "show_hero_search"
-
-# -----------
-# CloudCannon
-
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - Email
-  - RSS
-
-types:
-  - Document
-  - Video
-
-_comments:
+# Development Settings
+port: 4000
+host: 0.0.0.0
+safe: false
