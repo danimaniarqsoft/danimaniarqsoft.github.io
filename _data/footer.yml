@@ -1,0 +1,8 @@
+- name: INFOTEC
+  link: https://www.infotec.mx/
+  new_window: true
+  social_icon: Facebook
+- name:
+  link: https://twitter.com/
+  social_icon: Twitter
+  new_window: true
