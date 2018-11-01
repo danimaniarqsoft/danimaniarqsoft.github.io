@@ -1,9 +1,9 @@
 ---
 layout: home
 title: Home
-landing-title: 'Hi, my name is Forty'
+landing-title: 'Daniel Cortes Pichardo'
 description: null
-image: null
+image: dcp.jpg
 author: null
 show_tile: false
 ---
