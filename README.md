@@ -1,73 +1,59 @@
-# Forty - Jekyll Theme
+# levytsroman.github.io
+Personal portfolio page, aspiring jekyll theme.
 
-A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  
+# To get started: 
 
-![Forty Theme](assets/images/forty.jpg "Forty Theme")
+Make sure Ruby is installed on your computer, for detailed information on how check this link https://www.ruby-lang.org/en/documentation/installation/
 
-# How to Use
+1) fork the repo
 
-For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details, 
-or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
-and [creating pages](https://jekyllrb.com/docs/pages/).
+2) If you want to utilize gh-pages hosting rename the cloned repository to follow the following format:
 
-- **GitLab**: Simply fork this repository and start editing the `_config.yml` file!  
-- **GitHub**: Fork this reposity and create a branch named `gh-pages`, then start editing the `_config.yml` file.
-
-# Added Features
-
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Use `_config.yml` to **set whether the homepage tiles should pull pages or posts**, as well as how many to display.
-* Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
-* Set **featured images** in front matter.
-
-# Issues
-
-If you would like to report a bug, ask a question, request a feature, feel free to do so on [the GitLab repository](https://gitlab.com/andrewbanchich/forty-jekyll-theme) and I will be more than happy to help!
-
-Alternatively, you can open an issue via email by emailing [incoming+andrewbanchich/forty-jekyll-theme@incoming.gitlab.com](mailto:incoming+andrewbanchich/forty-jekyll-theme@incoming.gitlab.com).
-
-The GitHub repository is simply a mirror of the GitLab repository.
-
-# Credits
-
-Original README from HTML5 UP:
-
-```
-Forty by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-
-
-This is Forty, my latest and greatest addition to HTML5 UP and, per its incredibly
-creative name, my 40th (woohoo)! It's built around a grid of "image tiles" that are
-set up to smoothly transition to secondary landing pages (for which a separate page
-template is provided), and includes a number of neat effects (check out the menu!),
-extra features, and all the usual stuff you'd expect. Hope you dig it!
-
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
-
-(* = not included)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		background-size polyfill (github.com/louisremi)
-		Misc. Sass functions (@HugoGiraudel)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
+``` 
+  username.github.io
 ```
 
-Repository [Jekyll logo](https://github.com/jekyll/brand) icon licensed under a [Creative Commons Attribution 4.0 International License](http://choosealicense.com/licenses/cc-by-4.0/).
+3) clone the repo by running in your bash terminal/cmd, make sure to change url below to url of your own fork.
+
+```
+git clone https://github.com/LevytsRoman/levytsroman.github.io.git
+```
+
+4) go into the folder with 
+```
+cd levytsroman.github.io
+```
+
+5) run 
+```
+bundle install
+``` 
+  to install all the necessary gems(those are ruby libraries)
+
+6) run 
+```
+bundle exec jekyll serve
+``` 
+  this will start jekyll which will regenerate your html every time you make a change. You should now be able to navigate to http://localhost:4000 and see the site.
+
+7) finally open a new terminal window and run 
+```
+bash sass_watch.sh
+```
+  This will start sass and compile various sass files into css.
+
+Now that you're up and running try changing _config.yml such as email title, linkedin url etc, restart jekyll and see your changes. 
+* every time you change _config.yml you'll have to restart the server to see your changes.
+
+# Usage
+
+Most of the content of the site comes from the ```_data``` folder.
+
+The website is designed to have 4 sections if you want to change what they are, modify the ```sections.yml``` file inside ```_data``` folder. If you do change the sections, make sure not to change the class property, as css file rely on them being called a cetain way.
+
+To update projects modify the ```projects.yml```, you can add your own tags and later reference them in ```_includes/project_box``` by putting 
+```{{project.your_tag}}``` in the html.
+
+If you want to use the form in the contact page, you'll need to make an account with https://formspree.io/. Then simply update the email in the _config.yml to whatever you used to register.
+
+For more info on how to use jekyll visit https://jekyllrb.com/docs/home/
