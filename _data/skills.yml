@@ -57,5 +57,5 @@
   skills:
     - class: linux-plain
       skill_name: Linux
-    - class: windows-plain
+    - class: windows8-plain
       skill_name: Windows
